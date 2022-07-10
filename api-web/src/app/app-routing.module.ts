@@ -1,3 +1,4 @@
+import { Pag404Component } from './pessoa-component/pag404/pag404.component';
 import { EditComponent } from './pessoa-component/edit/edit.component';
 import { AddComponent } from './pessoa-component/add/add.component';
 import { ListComponent } from './pessoa-component/list/list.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   {path: 'list',  component: ListComponent},
   {path: 'add', component: AddComponent},
   {path: 'edit', component: EditComponent},
+  {path: '**', component: Pag404Component},
 ];
 
 @NgModule({
