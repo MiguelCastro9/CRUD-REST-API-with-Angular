@@ -24,7 +24,7 @@ export class PessoasService {
 
   alteraPessoa(pessoa: Pessoa){
 
-    return this.http.put<Pessoa>(this.url + '/altera/', pessoa.id);
+    return this.http.put<Pessoa>(this.url + '/altera/' + pessoa.id, pessoa);
   }
 
   buscaPessoa(id: any){

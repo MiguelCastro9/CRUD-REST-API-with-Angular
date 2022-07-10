@@ -12,6 +12,11 @@
       <td>{{p.id}}</td>
       <td>{{p.nome}}</td>
       <td>{{p.email}}</td>
+      <td>
+          <button (click)="deletar(p)" type="button">Remover</button>
+          &nbsp;
+          <button (click)="alterar(p)" type="button">Alterar</button>
+      </td>
     </tr>
   </tbody>
 </table>

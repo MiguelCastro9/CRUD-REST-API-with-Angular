@@ -20,4 +20,18 @@ export class ListComponent implements OnInit {
     .subscribe(dados => this.pessoa = dados);
   }
 
+  alterar(pessoa: Pessoa): void {
+
+    localStorage.setItem('id', pessoa.id.toString());
+    this.router.navigate(['edit']);
+  }
+
+  deletar(pessoa: Pessoa){
+
+    this.pessoaService.deletaPessoa(pessoa)
+    .subscribe(dados => {
+      this.pessoa = this.pessoa.filter(p => pessoa);
+      this.router.navigate(['list']);
+    })
+  }
 }

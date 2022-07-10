@@ -1,3 +1,6 @@
+import { Pessoa } from './../../model/pessoa';
+import { Router } from '@angular/router';
+import { PessoasService } from './../../service/pessoas.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditComponent implements OnInit {
 
-  constructor() { }
+  pessoa = new Pessoa();
+
+  constructor(private pessoaService: PessoasService, private router: Router) { }
 
   ngOnInit(): void {
+
+    this.getId();
   }
+
+  getId(){
+
+    let id = localStorage.getItem('id');
+    this.pessoaService.buscaPessoa(id)
+    .subscribe(dados => {
+      this.pessoa = dados;
+    });
+  }
+
+  alterar(pessoa: Pessoa){
+
+    this.pessoaService.alteraPessoa(pessoa)
+    .subscribe(dados => {
+      this.pessoa = dados;
+      this.router.navigate(['list']);
+    });
+  }
+
+
 
 }
