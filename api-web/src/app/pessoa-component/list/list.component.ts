@@ -31,7 +31,7 @@ export class ListComponent implements OnInit {
     this.pessoaService.deletaPessoa(pessoa)
     .subscribe(dados => {
       this.pessoa = this.pessoa.filter(p => pessoa);
-      this.router.navigate(['list']);
+      window.location.reload();
     })
   }
 }
