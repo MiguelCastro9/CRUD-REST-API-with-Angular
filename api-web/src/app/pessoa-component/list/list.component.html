@@ -1,4 +1,6 @@
 <strong><p>Listagem de pessoas</p></strong>
+<input [(ngModel)]="searchText" type="search" placeholder="buscar...">
+<br><br>
 <button (click)="inserir()">novo</button>
 <br><br>
 <table border="1">
@@ -10,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let p of pessoa">
+    <tr *ngFor="let p of pessoa | search:searchText">
       <td>{{p.id}}</td>
       <td>{{p.nome}}</td>
       <td>{{p.email}}</td>

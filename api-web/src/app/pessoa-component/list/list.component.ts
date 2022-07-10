@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ListComponent implements OnInit {
 
   pessoa: Pessoa[] = [];
+  searchText: string = '';
 
   constructor(private pessoaService: PessoasService, private router: Router) { }
 
