@@ -1,1 +1,9 @@
-<p>add works!</p>
+<form>
+  <label for="nome">
+    <input type="text" name="nome" [(ngModel)]="pessoa.nome" id="nome">
+  </label>
+  <label for="email">
+    <input type="text" name="email" [(ngModel)]="pessoa.email" id="email">
+  </label>
+  <button (click)="salvar(pessoa)">salvar</button>
+</form>

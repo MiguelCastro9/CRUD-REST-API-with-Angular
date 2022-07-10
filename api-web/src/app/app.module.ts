@@ -7,6 +7,7 @@ import { AddComponent } from './pessoa-component/add/add.component';
 import { ListComponent } from './pessoa-component/list/list.component';
 import { EditComponent } from './pessoa-component/edit/edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

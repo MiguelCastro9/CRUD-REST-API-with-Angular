@@ -5,7 +5,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: 'list', component: ListComponent},
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  {path: 'list',  component: ListComponent},
   {path: 'add', component: AddComponent},
   {path: 'edit', component: EditComponent},
 ];

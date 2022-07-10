@@ -19,7 +19,7 @@ export class PessoasService {
 
   salvaPessoa(pessoa: Pessoa){
 
-    return this.http.post<Pessoa>(this.url + '/salva', pessoa);
+    return this.http.post<Pessoa>(this.url + '/insere', pessoa);
   }
 
   alteraPessoa(pessoa: Pessoa){
