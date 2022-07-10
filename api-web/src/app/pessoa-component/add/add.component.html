@@ -1,9 +1,14 @@
+<strong><p>Cadastro de pessoas</p></strong>
+<button (click)="listar()">lista</button>
+<br><br>
 <form>
   <label for="nome">
-    <input type="text" name="nome" [(ngModel)]="pessoa.nome" id="nome">
+    <input type="text" name="nome" [(ngModel)]="pessoa.nome" id="nome" placeholder="nome...">
   </label>
+  <br><br>
   <label for="email">
-    <input type="text" name="email" [(ngModel)]="pessoa.email" id="email">
+    <input type="text" name="email" [(ngModel)]="pessoa.email" id="email" placeholder="email...">
   </label>
+  <br><br>
   <button (click)="salvar(pessoa)">salvar</button>
 </form>

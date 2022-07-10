@@ -8,13 +8,15 @@ import { ListComponent } from './pessoa-component/list/list.component';
 import { EditComponent } from './pessoa-component/edit/edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './pessoa-component/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

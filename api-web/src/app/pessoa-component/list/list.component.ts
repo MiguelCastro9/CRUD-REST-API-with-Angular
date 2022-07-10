@@ -20,6 +20,11 @@ export class ListComponent implements OnInit {
     .subscribe(dados => this.pessoa = dados);
   }
 
+  inserir() {
+
+    this.router.navigate(['add']);
+  }
+
   alterar(pessoa: Pessoa): void {
 
     localStorage.setItem('id', pessoa.id.toString());

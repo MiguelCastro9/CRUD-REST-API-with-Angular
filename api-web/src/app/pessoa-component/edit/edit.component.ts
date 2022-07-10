@@ -37,6 +37,9 @@ export class EditComponent implements OnInit {
     });
   }
 
+  listar(){
 
+    this.router.navigate(['list']);
+  }
 
 }

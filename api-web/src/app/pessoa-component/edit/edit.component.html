@@ -1,9 +1,14 @@
+<strong><p>Alterar pessoa [ {{pessoa.id}} ]</p></strong>
+<button (click)="listar()">lista</button>
+<br><br>
 <form>
   <label for="nome">
     <input type="text" name="nome" [(ngModel)]="pessoa.nome" id="nome">
   </label>
+  <br><br>
   <label for="email">
     <input type="text" name="email" [(ngModel)]="pessoa.email" id="email">
   </label>
+  <br><br>
   <button (click)="alterar(pessoa)">alterar</button>
 </form>

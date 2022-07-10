@@ -22,6 +22,11 @@ export class AddComponent implements OnInit {
     });
   }
 
+  listar(){
+
+    this.router.navigate(['list'])
+  }
+
   ngOnInit(): void {
   }
 
