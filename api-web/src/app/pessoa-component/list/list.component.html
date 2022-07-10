@@ -1,0 +1,18 @@
+<strong><p>Listagem de pessoas</p></strong>
+<table border="1">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>nome</th>
+      <th>e-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pessoa">
+      <td>{{p.id}}</td>
+      <td>{{p.nome}}</td>
+      <td>{{p.email}}</td>
+    </tr>
+  </tbody>
+</table>
+
