@@ -1,14 +1,18 @@
 <strong><p>Alterar pessoa [ {{pessoa.id}} ]</p></strong>
-<button (click)="listar()">lista</button>
+<button style="color: green;" (click)="listar()">lista</button>
 <br><br>
-<form>
-  <label for="nome">
-    <input type="text" name="nome" [(ngModel)]="pessoa.nome" id="nome">
-  </label>
-  <br><br>
-  <label for="email">
-    <input type="text" name="email" [(ngModel)]="pessoa.email" id="email">
-  </label>
-  <br><br>
-  <button (click)="alterar(pessoa)">alterar</button>
-</form>
+<fieldset style="margin-right: 80%;">
+  <legend>formulário:</legend>
+  <form>
+    <label for="nome">
+      <input type="text" name="nome" [(ngModel)]="pessoa.nome" id="nome">
+    </label>
+    <br><br>
+    <label for="email">
+      <input type="text" name="email" [(ngModel)]="pessoa.email" id="email">
+    </label>
+    <br><br>
+    <button style="color: green;" (click)="alterar(pessoa)">alterar</button>
+  </form>
+</fieldset>
+

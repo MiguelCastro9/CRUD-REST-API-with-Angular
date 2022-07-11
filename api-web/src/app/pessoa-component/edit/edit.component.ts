@@ -33,6 +33,7 @@ export class EditComponent implements OnInit {
     this.pessoaService.alteraPessoa(pessoa)
     .subscribe(dados => {
       this.pessoa = dados;
+      alert('alterado com sucesso!');
       this.router.navigate(['list']);
     });
   }

@@ -16,7 +16,6 @@ export class SearchPipe implements PipeTransform {
     }
 
     args = args.toLocaleLowerCase();
-    debugger;
     return value.filter(function(item: any) {
       return JSON.stringify(item)
       .toLowerCase()
