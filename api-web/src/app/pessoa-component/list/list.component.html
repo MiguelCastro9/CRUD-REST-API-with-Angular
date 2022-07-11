@@ -1,7 +1,7 @@
 <strong><p>Listagem de pessoas</p></strong>
 <input [(ngModel)]="searchText" type="search" placeholder="buscar...">
 <br><br>
-<button (click)="inserir()">novo</button>
+<button style="color: green;" (click)="inserir()">novo</button>
 <br><br>
 <table border="1">
   <thead>
@@ -9,6 +9,7 @@
       <th>#</th>
       <th>nome</th>
       <th>e-mail</th>
+      <th>ações</th>
     </tr>
   </thead>
   <tbody>
@@ -17,9 +18,9 @@
       <td>{{p.nome}}</td>
       <td>{{p.email}}</td>
       <td>
-          <button (click)="deletar(p)" type="button">Remover</button>
+        <button style="color: goldenrod;" (click)="alterar(p)" type="button">Alterar</button>
           &nbsp;
-          <button (click)="alterar(p)" type="button">Alterar</button>
+          <button style="color: red;" (click)="deletar(p)" type="button">Deletar</button>
       </td>
     </tr>
   </tbody>
